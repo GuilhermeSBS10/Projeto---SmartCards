@@ -1,0 +1,45 @@
+/* Fundo da tela com degradê predominante */
+body {
+  background: radial-gradient(circle at 15% 10%, rgba(37, 99, 235, 0.35), transparent 35%),
+              radial-gradient(circle at 85% 15%, rgba(124, 58, 237, 0.35), transparent 35%),
+              radial-gradient(circle at 55% 90%, rgba(239, 68, 68, 0.30), transparent 35%),
+              #f6f8ff;
+}
+
+/* Caixa principal do formulário */
+.painel-autenticacao {
+  background: var(--branco);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--raio-g);
+  box-shadow: var(--sombra-m);
+  padding: 24px;
+}
+
+.painel-autenticacao h1 {
+  margin-bottom: 16px;
+  color: var(--texto-principal);
+}
+
+/* Organização do formulário */
+#formulario-entrada, #formulario-cadastro {
+  display: grid;
+  gap: 14px;
+}
+
+#formulario-entrada .botao, #formulario-cadastro .botao {
+  width: 100%;
+}
+
+.painel-autenticacao p {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.painel-autenticacao a {
+  color: var(--azul-500);
+  font-weight: 600;
+}
+
+.painel-autenticacao a:hover {
+  text-decoration: underline;
+}

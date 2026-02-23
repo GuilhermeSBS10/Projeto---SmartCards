@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar - SmartCards</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+    <main class="tela-autenticacao">
+        <section class="conteudo-central painel-autenticacao">
+        <h1>Entrar</h1>
+        <form id="formulario-entrada" method="post">
+            <div class="grupo-campo">
+                <label for="email">Email</label>
+                <input class="campo" type="email" id="email" name="email" required />
+            </div>
+
+            <div class="grupo-campo">
+                <label for="senha">Senha</label>
+                <input class="campo" type="password" id="senha" name="senha" required />
+            </div>
+
+            <button class="botao botao-primario" type="submit">Entrar</button>
+            <button class="botao botao-secundario" type="button" onclick="window.location.href='cadastro.html'">Cadastrar</button>
+        </form>
+        </section>
+    </main>
+</body>
+</html>

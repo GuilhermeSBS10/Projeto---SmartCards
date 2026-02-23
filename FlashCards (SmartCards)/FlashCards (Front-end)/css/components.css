@@ -1,0 +1,73 @@
+/* BOTÕES */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--raio-p);
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-1px);
+}
+
+.botao-primario {
+  background: var(--degrade-principal);
+  color: var(--branco);
+  box-shadow: var(--sombra-m);
+}
+
+.botao-secundario {
+  background: #e5e7eb;
+  color: var(--texto-principal);
+}
+
+.botao-perigo {
+  background: var(--vermelho-500);
+  color: var(--branco);
+}
+
+/* CARD */
+.cartao {
+  background: var(--branco);
+  border-radius: var(--raio-m);
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--sombra-m);
+  padding: 16px;
+}
+
+/* CAMPOS DE FORMULÁRIO */
+.grupo-campo {
+  display: grid;
+  gap: 6px;
+}
+
+.campo {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--raio-p);
+  background: var(--branco);
+  color: var(--texto-principal);
+}
+
+.campo:focus, textarea:focus, select:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #60a5fa;
+}
+
+/* TAGS / BADGES */
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #ede9fe;
+  color: #5b21b6;
+}
