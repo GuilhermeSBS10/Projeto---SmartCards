@@ -122,7 +122,7 @@ Banco de Dados
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Programadores
 
 * Guilherme dos Santos Barros Silva - Desenvolvedor Web Full-Stack
 * Sérgio Lucas Pinto Souza - Desenvolvedor Back-end
