@@ -124,4 +124,7 @@ Banco de Dados
 
 ## 👨‍💻 Autor
 
-Guilherme dos Santos Barros Silva
+Guilherme dos Santos Barros Silva - Desenvolvedor Web Full-Stack
+Sérgio Lucas Pinto Souza - Desenvolvedor Back-end
+Alexandre Ben Cavalcanti Luna - Banco de Dados
+Rodrigo Batista de Farias - Banco de Dados
