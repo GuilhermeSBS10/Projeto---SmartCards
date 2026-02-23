@@ -1,0 +1,61 @@
+/* Reset Base do CSS */
+
+/* Aplica box-sizing border-box para todos os elementos:
+   largura/altura passam a incluir padding e border */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Remove margens e espaçamentos padrões do navegador */
+}
+
+/* Garante altura mínima para ocupar a tela toda */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  /* Define altura de linha padrão para melhor leitura */
+  line-height: 1.5;
+
+  /* Melhora renderização de fontes no WebKit (Chrome/Safari) */
+  -webkit-font-smoothing: antialiased;
+
+  /* Melhora legibilidade geral do texto */
+  text-rendering: optimizeLegibility;
+}
+
+/* Faz mídias não “estourarem” o container */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inputs, botões e selects herdam fonte e cor do elemento pai */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  /* Remove estilo padrão de botão */
+  background: none;
+  border: none;
+
+  /* Mostra mãozinha ao passar mouse */
+  cursor: pointer;
+}
+
+a {
+  /* Link herda cor do contexto */
+  color: inherit;
+
+  /* Remove sublinhado padrão */
+  text-decoration: none;
+}
+
+/* Remove bolinhas/números padrão de listas */
+ul, ol {
+  list-style: none;
+}

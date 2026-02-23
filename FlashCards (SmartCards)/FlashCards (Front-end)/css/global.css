@@ -1,0 +1,58 @@
+/* Variáveis globais de cor, espaçamento, borda e sombra */
+:root {
+  /* Paleta principal */
+  --azul-500: #2563eb;
+  --roxo-500: #7c3aed;
+  --vermelho-500: #ef4444;
+
+  /* Tons de apoio */
+  --fundo-escuro: #0f172a;
+  --fundo-suave: #f8fafc;
+  --texto-principal: #0b1020;
+  --texto-suave: #475569;
+  --branco: #ffffff;
+
+  /* Degradê principal do sistema (azul -> roxo -> vermelho) */
+  --degrade-principal: linear-gradient(135deg, var(--azul-500), var(--roxo-500), var(--vermelho-500));
+
+  /* Medidas padrão */
+  --raio-p: 10px;
+  --raio-m: 14px;
+  --raio-g: 20px;
+  --sombra-m: 0 10px 25px rgba(2, 6, 23, 0.15);
+}
+
+/* Base visual do documento */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--texto-principal);
+  background: var(--fundo-suave);
+}
+
+/* Títulos com peso maior */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Texto comum com cor mais suave */
+p, small, label {
+  color: var(--texto-suave);
+}
+
+/* Classe utilitária para centralizar conteúdo com largura máxima */
+.conteudo-central {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+/* Classe utilitária para esconder elemento */
+.oculto {
+  display: none !important;
+}
+
+/* Fundo com degradê para áreas de destaque */
+.fundo-degrade {
+  background: var(--degrade-principal);
+  color: var(--branco);
+}

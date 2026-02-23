@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - SmartCards</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+    <div class="layout-aplicacao">
+        <aside class="barra-lateral">
+            <h1 class="marca">SmartCards</h1>
+
+            <nav class="menu-lateral">
+                <a class="link-menu ativo" href="dashboard.html">Dashboard</a>
+                <a class="link-menu" href="study.html">Estudar</a>
+                <a class="link-menu" href="stats.html">Estatísticas</a>
+                <a class="link-menu" href="login.html">Sair</a>
+            </nav>
+        </aside>
+
+        <main class="conteudo-principal">
+            <header class="cabecalho-pagina">
+                <div>
+                    <p class="etiqueta">Visão geral</p>
+                    <h2>Bem-vindo de volta</h2>
+                </div>
+                <button class="botao botao-primario" type="button">Novo assunto</button>
+            </header>
+
+            <section class="grade-resumo">
+                <article class="cartao cartao-resumo">
+                    <h2>Assuntos ativos</h2>
+                    <strong>6</strong>
+                </article>
+
+                <article class="cartao cartao-resumo">
+                    <h2>Flashcards</h2>
+                    <strong>124</strong>
+                </article>
+
+                <article class="cartao cartao-resumo">
+                    <h2>Revisões hoje</h2>
+                    <strong>18</strong>
+                </article>
+
+                <article class="cartao cartao-resumo">
+                    <h2>Média de retenção</h2>
+                    <strong>82%</strong>
+                </article>
+            </section>
+
+            <section class="grade-dashboard">
+                <article class="cartao area-grafico">
+                    <div class="topo-secao">
+                        <h3>Desempenho semanal</h3>
+                        <span class="etiqueta">7 dias</span>
+                    </div>
+                    <div class="grafico-falso">Gráfico entra aqui</div>
+                </article>
+
+                <article class="cartao area-assuntos">
+                    <div class="topo-secao">
+                        <h3>Assuntos</h3>
+                        <a href="#">Ver todos</a>
+                    </div>
+
+                    <ul class="lista-assuntos">
+                        <li class="item-assunto">
+                            <span>Matemática</span>
+                            <span class="etiqueta">24 cards</span>
+                        </li>
+                        <li class="item-assunto">
+                            <span>Biologia</span>
+                            <span class="etiqueta">18 cards</span>
+                        </li>
+                        <li class="item-assunto">
+                            <span>História</span>
+                            <span class="etiqueta">12 cards</span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
