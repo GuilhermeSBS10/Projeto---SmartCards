@@ -1,0 +1,50 @@
+.cartao-estudo {
+  min-height: 320px;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  text-align: center;
+  border: 1px solid #dbe3ff;
+  background: linear-gradient(165deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.08), rgba(239, 68, 68, 0.08));
+}
+
+.texto-apoio {
+  font-size: 0.95rem;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.cartao-estudo h3 {
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+}
+
+.texto-resposta {
+  color: #334155;
+}
+
+.painel-avaliacao {
+  display: grid;
+  gap: 12px;
+}
+
+.grade-avaliacao {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.destaque {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 900px) {
+  .grade-avaliacao {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .grade-avaliacao {
+    grid-template-columns: 1fr;
+  }
+}
