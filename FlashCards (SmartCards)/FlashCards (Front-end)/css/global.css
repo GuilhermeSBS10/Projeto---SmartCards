@@ -1,0 +1,159 @@
+/* Variáveis globais de cor, espaçamento, borda e sombra */
+:root {
+  /* Paleta principal */
+  --azul-500: #2563eb;
+  --roxo-500: #7c3aed;
+  --vermelho-500: #ef4444;
+
+  /* Tons de apoio */
+  --fundo-escuro: #0f172a;
+  --fundo-suave: #f8fafc;
+  --texto-principal: #0b1020;
+  --texto-suave: #475569;
+  --branco: #ffffff;
+
+  /* Degradê principal do sistema (azul -> roxo -> vermelho) */
+  --degrade-principal: linear-gradient(135deg, var(--azul-500), var(--roxo-500), var(--vermelho-500));
+
+  /* Medidas padrão */
+  --raio-p: 10px;
+  --raio-m: 14px;
+  --raio-g: 20px;
+  --sombra-m: 0 10px 25px rgba(2, 6, 23, 0.15);
+}
+
+/* Base visual do documento */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--texto-principal);
+  background: var(--fundo-suave);
+}
+
+/* Títulos com peso maior */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Texto comum com cor mais suave */
+p, small, label {
+  color: var(--texto-suave);
+}
+
+/* Classe utilitária para centralizar conteúdo com largura máxima */
+.conteudo-central {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+/* Classe utilitária para esconder elemento */
+.oculto {
+  display: none !important;
+}
+
+/* Fundo com degradê para áreas de destaque */
+.fundo-degrade {
+  background: var(--degrade-principal);
+  color: var(--branco);
+}
+
+/* Alternador de tema reutilizável */
+.alternador-tema {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.alternador-tema input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.trilho-tema {
+  width: 52px;
+  height: 30px;
+  border-radius: 999px;
+  background: #1f2937;
+  border: 1px solid #334155;
+  padding: 3px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.bolinha-tema {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transform: translateX(0);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.alternador-tema input:checked + .trilho-tema {
+  background: rgba(37, 99, 235, 0.22);
+  border-color: #3b82f6;
+}
+
+.alternador-tema input:checked + .trilho-tema .bolinha-tema {
+  transform: translateX(22px);
+  background: #f8fafc;
+}
+
+.alternador-tema input:focus-visible + .trilho-tema {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.barra-tema-global {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 80;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+  padding: 6px 8px;
+  backdrop-filter: blur(8px);
+}
+
+/* Modo escuro para páginas internas */
+body.tema-escuro {
+  background: #080d1d;
+  color: #e2e8f0;
+}
+
+body.tema-escuro h1, body.tema-escuro h2, body.tema-escuro h3, body.tema-escuro h4 {
+  color: #f8fafc;
+}
+
+body.tema-escuro p, body.tema-escuro small, body.tema-escuro label {
+  color: #94a3b8;
+}
+
+body.tema-escuro .cartao {
+  background: #111a31;
+  border-color: #24314c;
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.36);
+}
+
+body.tema-escuro .campo {
+  background: #0b1224;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+body.tema-escuro .botao-secundario {
+  background: #1f2937;
+  color: #e2e8f0;
+}
+
+body.tema-escuro .etiqueta {
+  background: #312e81;
+  color: #e0e7ff;
+}
+
+body:not(.tema-escuro) .barra-tema-global {
+  background: rgba(255, 255, 255, 0.85);
+}

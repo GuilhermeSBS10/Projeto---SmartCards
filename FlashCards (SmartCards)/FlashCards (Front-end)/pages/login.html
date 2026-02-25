@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar - SmartCards</title>
+    <link rel="icon" type="image/png" href="../assets/img/logoSmartCards.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body data-pagina="login">
+    <div class="barra-tema-global">
+        <label class="alternador-tema" for="controle-tema" title="Alternar modo claro e escuro">
+            <input id="controle-tema" type="checkbox" />
+            <span class="trilho-tema"><span class="bolinha-tema"></span></span>
+        </label>
+    </div>
+    <main class="tela-autenticacao tela-landing-login">
+        <section class="conteudo-central bloco-landing-login">
+            <article class="hero-landing">
+                <p class="selo-hero">Plataforma de estudo inteligente</p>
+                <h1>Transforme revisão em resultado real.</h1>
+                <p class="descricao-hero">
+                    Organize matérias, revise no momento certo e acompanhe seu desempenho com clareza.
+                    Tudo em uma experiência moderna e direta.
+                </p>
+
+                <div class="grade-beneficios">
+                    <div class="item-beneficio">
+                        <strong>+3x</strong>
+                        <span>mais consistência semanal</span>
+                    </div>
+                    <div class="item-beneficio">
+                        <strong>95%</strong>
+                        <span>de aprovação em testes simulados</span>
+                    </div>
+                    <div class="item-beneficio">
+                        <strong>24/7</strong>
+                        <span>acesso ao seu plano de revisão</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="painel-autenticacao cartao">
+                <a class="marca-auth" href="../index.html" aria-label="SmartCards">
+                    <img class="logo-auth logo-auth-escuro" src="../assets/img/smartCardsComONomeDark.png" alt="SmartCards" />
+                    <img class="logo-auth logo-auth-claro" src="../assets/img/smartCardsLogoComONome.png" alt="SmartCards" />
+                </a>
+                <p class="etiqueta">Acesso à conta</p>
+                <h2>Entrar no SmartCards</h2>
+                <form id="formulario-entrada" method="post">
+                    <div class="grupo-campo">
+                        <label for="email">Email</label>
+                        <input class="campo" type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="senha">Senha</label>
+                        <input class="campo" type="password" id="senha" name="senha" required />
+                    </div>
+
+                    <button class="botao botao-primario" type="submit">Entrar</button>
+                    <button class="botao botao-secundario" type="button" id="botao-ir-cadastro">Criar conta</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <script defer src="../js/tema.js"></script>
+    <script type="module" src="../js/modules/auth-pages.js"></script>
+</body>
+</html>

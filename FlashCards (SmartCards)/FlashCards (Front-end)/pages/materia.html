@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Matéria - SmartCards</title>
+  <link rel="icon" type="image/png" href="../assets/img/logoSmartCards.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/materia.css" />
+</head>
+<body data-pagina="materia">
+    <div class="barra-tema-global">
+        <label class="alternador-tema" for="controle-tema" title="Alternar modo claro e escuro">
+            <input id="controle-tema" type="checkbox" />
+            <span class="trilho-tema"><span class="bolinha-tema"></span></span>
+        </label>
+    </div>
+
+    <div class="layout-aplicacao">
+        <aside class="barra-lateral">
+            <h1 class="marca">
+                <span class="marca-lateral">
+                    <img class="marca-icone" src="../assets/img/logoSmartCards.png" alt="" aria-hidden="true" />
+                    <span>SmartCards</span>
+                </span>
+            </h1>
+            <nav class="menu-lateral">
+                <a class="link-menu" href="dashboard.html">Dashboard</a>
+                <a class="link-menu ativo" href="materia.html">Matérias</a>
+                <a class="link-menu" href="study.html">Estudar</a>
+                <a class="link-menu" href="stats.html">Estatísticas</a>
+                <a class="link-menu" href="login.html" data-acao="sair">Sair</a>
+            </nav>
+        </aside>
+
+        <main class="conteudo-principal">
+            <header class="cabecalho-pagina">
+                <div>
+                    <p class="etiqueta">Cadastro de matéria</p>
+                    <h2>Crie matérias e questões com alternativas</h2>
+                </div>
+            </header>
+
+            <section class="cartao painel-materia">
+                <form id="form-estrutura-materia" class="grade-formulario-materia">
+                    <div class="grupo-campo">
+                        <label for="seletor-materia">Matéria</label>
+                        <select class="campo" id="seletor-materia" name="materia_id"></select>
+                    </div>
+
+                    <div class="grupo-campo" id="bloco-nome-materia">
+                        <label for="nome-materia">Nome da nova matéria</label>
+                        <input class="campo" id="nome-materia" name="nome_materia" type="text" placeholder="Ex.: Química" />
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="quantidade-questoes">Quantas questões quer adicionar agora?</label>
+                        <input class="campo" id="quantidade-questoes" name="quantidade_questoes" type="number" min="1" max="20" value="3" required />
+                    </div>
+
+                    <button class="botao botao-primario" type="submit">Gerar campos de questões</button>
+                </form>
+            </section>
+
+            <section class="cartao painel-questoes" id="painel-questoes" hidden>
+                <div class="topo-painel-questoes">
+                    <h3>Questões para cadastro</h3>
+                    <span class="etiqueta" id="etiqueta-modo-edicao" hidden>Modo edição</span>
+                    <small>Máximo de 5 alternativas (A até E) por questão.</small>
+                </div>
+
+                <form id="form-questoes" class="lista-questoes"></form>
+
+                <div class="acoes-painel-questoes">
+                    <button class="botao botao-secundario" id="botao-adicionar-questao" type="button">+ Adicionar mais uma questão</button>
+                    <button class="botao botao-secundario" id="botao-cancelar-edicao" type="button" hidden>Cancelar edição</button>
+                    <button class="botao botao-primario" id="botao-salvar-questoes" type="button">Salvar matéria e questões</button>
+                </div>
+            </section>
+
+            <section class="cartao">
+                <h3>Matérias cadastradas</h3>
+                <ul id="lista-materias" class="lista-materias"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script defer src="../js/tema.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

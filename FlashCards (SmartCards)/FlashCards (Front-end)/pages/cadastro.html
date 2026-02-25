@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - SmartCards</title>
+    <link rel="icon" type="image/png" href="../assets/img/logoSmartCards.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body data-pagina="cadastro">
+    <div class="barra-tema-global">
+        <label class="alternador-tema" for="controle-tema" title="Alternar modo claro e escuro">
+            <input id="controle-tema" type="checkbox" />
+            <span class="trilho-tema"><span class="bolinha-tema"></span></span>
+        </label>
+    </div>
+    <main class="tela-autenticacao">
+        <section class="conteudo-central painel-autenticacao">
+        <a class="marca-auth" href="../index.html" aria-label="SmartCards">
+            <img class="logo-auth logo-auth-escuro" src="../assets/img/smartCardsComONomeDark.png" alt="SmartCards" />
+            <img class="logo-auth logo-auth-claro" src="../assets/img/smartCardsLogoComONome.png" alt="SmartCards" />
+        </a>
+        <h1>Criar conta</h1>
+
+        <form id="formulario-cadastro" method="post">
+            <div class="grupo-campo">
+                <label for="nome">Nome</label>
+                <input class="campo" id="nome" name="nome" type="text" required />
+            </div>
+            <div class="grupo-campo">
+                <label for="email">Email</label>
+                <input class="campo" id="email" name="email" type="email" required />
+            </div>
+            <div class="grupo-campo">
+                <label for="senha">Senha</label>
+                <input class="campo" id="senha" name="senha" type="password" minlength="6" required />
+            </div>
+            <div class="grupo-campo">
+                <label for="confirmar-senha">Confirmar senha</label>
+                <input class="campo" id="confirmar-senha" name="confirmar_senha" type="password" minlength="6" required />
+            </div>
+
+            <button class="botao botao-primario" type="submit">Cadastrar</button>
+        </form>
+
+        <p>Já tem conta? <a href="login.html">Entrar</a></p>
+        </section>
+    </main>
+    <script defer src="../js/tema.js"></script>
+    <script type="module" src="../js/modules/auth-pages.js"></script>
+</body>
+</html>

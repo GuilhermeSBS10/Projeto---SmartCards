@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudar - SmartCards</title>
+  <link rel="icon" type="image/png" href="../assets/img/logoSmartCards.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/study.css" />
+</head>
+<body data-pagina="estudo">
+    <div class="barra-tema-global">
+        <label class="alternador-tema" for="controle-tema" title="Alternar modo claro e escuro">
+            <input id="controle-tema" type="checkbox" />
+            <span class="trilho-tema"><span class="bolinha-tema"></span></span>
+        </label>
+    </div>
+    <div class="layout-aplicacao">
+        <aside class="barra-lateral">
+            <h1 class="marca">
+                <span class="marca-lateral">
+                    <img class="marca-icone" src="../assets/img/logoSmartCards.png" alt="" aria-hidden="true" />
+                    <span>SmartCards</span>
+                </span>
+            </h1>
+
+            <nav class="menu-lateral">
+                <a class="link-menu" href="dashboard.html">Dashboard</a>
+                <a class="link-menu" href="materia.html">Matérias</a>
+                <a class="link-menu ativo" href="study.html">Estudar</a>
+                <a class="link-menu" href="stats.html">Estatísticas</a>
+                <a class="link-menu" href="login.html" data-acao="sair">Sair</a>
+            </nav>
+        </aside>
+
+        <main class="conteudo-principal">
+            <header class="cabecalho-pagina">
+                <div>
+                    <p class="etiqueta">Sessão de estudo</p>
+                    <h2>Revisão ativa</h2>
+                </div>
+                <div class="acoes-estudo-topo">
+                    <select class="campo seletor-materia-estudo" id="seletor-materia-estudo"></select>
+                    <span class="etiqueta" id="indicador-cartao">Cartão 1 de 1</span>
+                </div>
+            </header>
+
+            <section class="bloco-estudo">
+                <div class="painel-cartao-estudo">
+                    <article class="cartao-estudo" id="cartao-estudo" aria-live="polite">
+                        <div class="cartao-estudo-interno">
+                            <div class="face-cartao face-frente">
+                                <p class="texto-apoio">Pergunta</p>
+                                <h3 id="texto-pergunta">Qual é a função principal das mitocôndrias na célula?</h3>
+                            </div>
+
+                            <div class="face-cartao face-verso">
+                                <p class="texto-apoio">Resposta</p>
+                                <p class="texto-resposta" id="texto-resposta">Produção de energia através da respiração celular.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <aside class="cartao painel-alternativas">
+                        <p class="texto-apoio">Alternativas</p>
+                        <ul id="lista-alternativas"></ul>
+                        <small>Responda mentalmente e depois vire o cartão.</small>
+                    </aside>
+                </div>
+
+                <div class="acoes-cartao-estudo">
+                    <button class="botao botao-secundario" type="button" id="botao-anterior" hidden>Pergunta anterior</button>
+                    <button class="botao botao-secundario" type="button" id="botao-virar">Virar cartão</button>
+                </div>
+            </section>
+
+            <section class="cartao painel-avaliacao">
+                <h3>Você acertou essa questão?</h3>
+                <div class="grade-resultado" id="grade-resultado">
+                    <button class="botao botao-acerto" type="button" data-resultado="acerto">Acertei</button>
+                    <button class="botao botao-erro" type="button" data-resultado="erro">Errei</button>
+                </div>
+                <small id="status-resultado">Selecione uma opção para continuar.</small>
+            </section>
+
+            <section class="cartao painel-avaliacao">
+                <h3>Como classifica seu desempenho nessa questão?</h3>
+                <div class="grade-avaliacao">
+                    <button class="botao botao-nota-ruim" type="button" data-nota="1">Ruim</button>
+                    <button class="botao botao-nota-medio" type="button" data-nota="2">Médio</button>
+                    <button class="botao botao-nota-bom" type="button" data-nota="3">Bom</button>
+                    <button class="botao botao-nota-excelente destaque" type="button" data-nota="4">Excelente</button>
+                </div>
+            </section>
+
+            <section class="cartao painel-fim-sessao" id="painel-fim-sessao" hidden>
+                <h3>Parabéns pelo esforço!</h3>
+                <p>Você concluiu os cards desta sessão. Continue no ritmo para fixar melhor o conteúdo.</p>
+                <button class="botao botao-primario" type="button" id="botao-nova-sessao">Iniciar nova sessão</button>
+            </section>
+        </main>
+    </div>
+    <script defer src="../js/tema.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+.painel-materia {
+  padding: 18px;
+}
+
+.grade-formulario-materia {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.grade-formulario-materia .botao {
+  align-self: end;
+}
+
+.painel-questoes {
+  display: grid;
+  gap: 14px;
+}
+
+.topo-painel-questoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.lista-questoes {
+  display: grid;
+  gap: 12px;
+}
+
+.item-questao {
+  border: 1px solid #dbe3f0;
+  border-radius: var(--raio-m);
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.linha-alternativa {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.linha-alternativa span {
+  font-weight: 700;
+  color: #4338ca;
+}
+
+.acoes-questao {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.acoes-painel-questoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lista-materias {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.lista-materias li {
+  border: 1px solid #dbe3f0;
+  border-radius: var(--raio-p);
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.acoes-item-materia {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 1060px) {
+  .grade-formulario-materia {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .grade-formulario-materia {
+    grid-template-columns: 1fr;
+  }
+}

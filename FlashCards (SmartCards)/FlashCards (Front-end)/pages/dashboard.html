@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - SmartCards</title>
+  <link rel="icon" type="image/png" href="../assets/img/logoSmartCards.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body data-pagina="dashboard">
+    <div class="barra-tema-global">
+        <label class="alternador-tema" for="controle-tema" title="Alternar modo claro e escuro">
+            <input id="controle-tema" type="checkbox" />
+            <span class="trilho-tema"><span class="bolinha-tema"></span></span>
+        </label>
+    </div>
+    <div class="layout-aplicacao">
+        <aside class="barra-lateral">
+            <h1 class="marca">
+                <span class="marca-lateral">
+                    <img class="marca-icone" src="../assets/img/logoSmartCards.png" alt="" aria-hidden="true" />
+                    <span>SmartCards</span>
+                </span>
+            </h1>
+
+            <nav class="menu-lateral">
+                <a class="link-menu ativo" href="dashboard.html">Dashboard</a>
+                <a class="link-menu" href="materia.html">Matérias</a>
+                <a class="link-menu" href="study.html">Estudar</a>
+                <a class="link-menu" href="stats.html">Estatísticas</a>
+                <a class="link-menu" href="login.html" data-acao="sair">Sair</a>
+            </nav>
+        </aside>
+
+        <main class="conteudo-principal">
+            <header class="cabecalho-pagina">
+                <div>
+                    <p class="etiqueta">Painel do dia</p>
+                    <h2>Próximas ações de estudo</h2>
+                </div>
+                <div class="acoes-cabecalho-dashboard">
+                    <a class="botao botao-secundario" href="materia.html">+ Criar matéria</a>
+                    <a class="botao botao-primario" id="botao-continuar-estudo" href="study.html">Continuar estudo</a>
+                </div>
+            </header>
+
+            <section class="grade-resumo" id="dashboard-atalhos"></section>
+
+            <section class="grade-dashboard">
+                <article class="cartao area-grafico">
+                    <div class="topo-secao">
+                        <h3>Matérias com mais erros</h3>
+                        <a href="stats.html">Ver análise completa</a>
+                    </div>
+                    <ul class="lista-assuntos" id="dashboard-prioridades"></ul>
+                </article>
+
+                <article class="cartao area-assuntos">
+                    <div class="topo-secao">
+                        <h3>Fila de revisão</h3>
+                        <a href="study.html">Ir para estudo</a>
+                    </div>
+                    <ul class="lista-assuntos" id="dashboard-pendentes"></ul>
+                </article>
+            </section>
+
+            <section class="cartao">
+                <div class="topo-secao">
+                    <h3>Última sessão</h3>
+                </div>
+                <div id="dashboard-ultima-sessao"></div>
+            </section>
+        </main>
+    </div>
+    <script defer src="../js/tema.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estatísticas - SmartCards</title>
+  <link rel="icon" type="image/png" href="../assets/img/logoSmartCards.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body data-pagina="stats">
+    <div class="barra-tema-global">
+        <label class="alternador-tema" for="controle-tema" title="Alternar modo claro e escuro">
+            <input id="controle-tema" type="checkbox" />
+            <span class="trilho-tema"><span class="bolinha-tema"></span></span>
+        </label>
+    </div>
+    <div class="layout-aplicacao">
+        <aside class="barra-lateral">
+            <h1 class="marca">
+                <span class="marca-lateral">
+                    <img class="marca-icone" src="../assets/img/logoSmartCards.png" alt="" aria-hidden="true" />
+                    <span>SmartCards</span>
+                </span>
+            </h1>
+
+            <nav class="menu-lateral">
+                <a class="link-menu" href="dashboard.html">Dashboard</a>
+                <a class="link-menu" href="materia.html">Matérias</a>
+                <a class="link-menu" href="study.html">Estudar</a>
+                <a class="link-menu ativo" href="stats.html">Estatísticas</a>
+                <a class="link-menu" href="login.html" data-acao="sair">Sair</a>
+            </nav>
+        </aside>
+
+        <main class="conteudo-principal">
+            <header class="cabecalho-pagina">
+                <div>
+                    <p class="etiqueta">Análise de desempenho</p>
+                    <h2>Seu progresso de estudos</h2>
+                </div>
+                <span class="etiqueta" id="periodo-analise">Últimos 7 dias</span>
+            </header>
+
+            <section class="grade-resumo" id="stats-cards"></section>
+
+            <section class="grade-dashboard">
+                <article class="cartao area-grafico">
+                    <div class="topo-secao">
+                        <h3>Acertos x Erros por dia</h3>
+                        <span class="etiqueta" id="atualizacao-stats">Atualizado hoje</span>
+                    </div>
+                    <div class="grafico-falso" id="grafico-retencao"></div>
+                </article>
+
+                <article class="cartao area-assuntos">
+                    <div class="topo-secao">
+                        <h3>Ranking por assunto</h3>
+                    </div>
+                    <ul class="lista-assuntos" id="ranking-materias"></ul>
+                </article>
+            </section>
+
+            <section class="cartao">
+                <div class="topo-secao">
+                    <h3>Questões para reforçar</h3>
+                </div>
+                <ul class="lista-assuntos" id="questoes-criticas"></ul>
+            </section>
+        </main>
+    </div>
+    <script defer src="../js/tema.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

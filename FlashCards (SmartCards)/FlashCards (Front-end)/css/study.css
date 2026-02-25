@@ -1,0 +1,253 @@
+.bloco-estudo {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+  align-content: center;
+  min-height: 58vh;
+  margin-top: 6px;
+}
+
+.acoes-estudo-topo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.seletor-materia-estudo {
+  min-width: 190px;
+}
+
+.painel-cartao-estudo {
+  width: min(1080px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 14px;
+  align-items: center;
+}
+
+.cartao-estudo {
+  perspective: 1200px;
+  width: 100%;
+  height: 420px;
+  position: relative;
+  margin-inline: auto;
+}
+
+.cartao-estudo::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: calc(var(--raio-m) + 8px);
+  background: linear-gradient(135deg, rgba(76, 29, 149, 0.45), rgba(107, 33, 168, 0.42), rgba(49, 46, 129, 0.40));
+  filter: blur(16px);
+  z-index: 0;
+  opacity: 0.75;
+}
+
+.cartao-estudo-interno {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cartao-estudo.virado .cartao-estudo-interno {
+  transform: rotateY(180deg);
+}
+
+.face-cartao {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+  border-radius: var(--raio-m);
+  padding: 20px;
+  border: 1px solid rgba(219, 227, 255, 0.65);
+  backface-visibility: hidden;
+  box-shadow: var(--sombra-m);
+}
+
+.face-frente {
+  background: linear-gradient(160deg, rgba(49, 46, 129, 0.72), rgba(76, 29, 149, 0.72), rgba(107, 33, 168, 0.68));
+}
+
+.face-verso {
+  transform: rotateY(180deg);
+  background: linear-gradient(160deg, rgba(88, 28, 135, 0.76), rgba(76, 29, 149, 0.74), rgba(30, 41, 59, 0.7));
+}
+
+.texto-apoio {
+  font-size: 0.95rem;
+  color: #eff6ff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cartao-estudo h3 {
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  color: #f8fafc;
+  max-width: 24ch;
+}
+
+.texto-resposta {
+  color: #f8fafc;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  max-width: 50ch;
+  line-height: 1.6;
+}
+
+#botao-virar {
+  min-width: 220px;
+}
+
+.acoes-cartao-estudo {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.painel-alternativas {
+  min-height: 220px;
+  align-self: center;
+}
+
+.painel-alternativas ul {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.painel-alternativas li {
+  border: 1px solid #dbe3ff;
+  border-radius: var(--raio-p);
+  padding: 10px 12px;
+  background: rgba(124, 58, 237, 0.06);
+}
+
+.painel-alternativas li strong {
+  color: #4338ca;
+}
+
+.painel-avaliacao {
+  width: min(760px, 100%);
+  margin-inline: auto;
+}
+
+.painel-avaliacao {
+  display: grid;
+  gap: 12px;
+}
+
+.grade-avaliacao {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.grade-resultado {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.botao-acerto {
+  background: #16a34a;
+  color: #fff;
+}
+
+.botao-erro {
+  background: #dc2626;
+  color: #fff;
+}
+
+.grade-resultado .botao.ativo {
+  outline: 3px solid rgba(15, 23, 42, 0.25);
+  transform: translateY(-1px);
+}
+
+.grade-avaliacao .botao.ativo {
+  outline: 3px solid rgba(15, 23, 42, 0.22);
+  transform: translateY(-1px);
+}
+
+.botao-nota-ruim {
+  background: #dc2626;
+  color: #fff;
+}
+
+.botao-nota-medio {
+  background: #f97316;
+  color: #fff;
+}
+
+.botao-nota-bom {
+  background: #0284c7;
+  color: #fff;
+}
+
+.botao-nota-excelente {
+  background: #16a34a;
+  color: #fff;
+}
+
+.destaque {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.painel-fim-sessao {
+  width: min(760px, 100%);
+  margin-inline: auto;
+  text-align: center;
+  display: grid;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .acoes-estudo-topo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .seletor-materia-estudo {
+    width: 100%;
+  }
+
+  .painel-cartao-estudo {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-estudo {
+    height: 360px;
+  }
+
+  .grade-avaliacao {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-resultado {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .cartao-estudo {
+    height: 320px;
+  }
+
+  .face-cartao {
+    padding: 16px;
+  }
+
+  .grade-avaliacao {
+    grid-template-columns: 1fr;
+  }
+}
